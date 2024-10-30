@@ -20,12 +20,12 @@ const Nivel = nivelModelo(sequelize, DataTypes);
 const JugadorNivel = jugadorNivelModelo(sequelize, DataTypes);
 
 sequelize.authenticate()
-.then(() => console.log('Conectado a la base de datos.'))
-.catch(err => console.error('No se pudo conectar a la base de datos.', err))
+    .then(() => console.log('Conectado a la base de datos.'))
+    .catch(err => console.error('No se pudo conectar a la base de datos.', err))
 
 sequelize.sync({alter: true, force: false})
-.then(() => console.log('Sincronización completada.'))
-.catch(err => console.error('Error en la sincronización.', err))
+    .then(() => console.log('Sincronización completada.'))
+    .catch(err => console.error('Error en la sincronización.', err))
 
 module.exports = {
     Jugador,

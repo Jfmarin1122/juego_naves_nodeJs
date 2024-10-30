@@ -1,7 +1,8 @@
 module.exports = (sequelize, DataTypes) => {
     return sequelize.define('JugadorNivel', {
         id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER
+            ,
             primaryKey: true,
             autoIncrement: true
         },
